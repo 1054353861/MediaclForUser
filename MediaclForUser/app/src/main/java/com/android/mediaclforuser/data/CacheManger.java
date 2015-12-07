@@ -6,5 +6,4 @@ package com.android.mediaclforuser.data;
 public class CacheManger {
     public static String USER="User";
 
-
 }

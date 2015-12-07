@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_414141">#414141</color>
+    <color name="color_AAAAAC">#AAAAAC</color>
+    <color name="color_EEEEEE">#EEEEEE</color>
+    <color name="color_A2A2A2">#A2A2A2</color>
+    <color name="color_F07F79">#F07F79</color>
+    <color name="color_D4D4D4">#D4D4D4</color>
+
+
+
+    <drawable name="color_A2A2A2">#A2A2A2</drawable>
+</resources>
