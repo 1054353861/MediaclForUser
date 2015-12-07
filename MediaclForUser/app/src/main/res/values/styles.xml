@@ -5,4 +5,23 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="indicatorColor" format="color" />
+        <attr name="underlineColor" format="color" />
+        <attr name="tabDivider" format="reference|color" />
+        <attr name="dividerPaddingTopBottom" format="dimension" />
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="indicatorHeight" format="dimension" />
+        <attr name="underlineHeight" format="dimension" />
+        <attr name="iconPadding" format="dimension" />
+        <attr name="tabPaddingLeft" format="dimension" />
+        <attr name="tabPaddingRight" format="dimension" />
+        <attr name="tabPaddingTop" format="dimension" />
+        <attr name="tabPaddingBottom" format="dimension" />
+        <attr name="scrollOffset" format="dimension" />
+        <attr name="tabBackground" format="reference|color" />
+        <attr name="shouldExpand" format="boolean" />
+        <attr name="tabTextAllCaps" format="boolean" />
+    </declare-styleable>
+
 </resources>
