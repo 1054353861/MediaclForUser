@@ -1,13 +1,27 @@
 package com.android.mediaclforuser.data;
 
 
+import com.android.mediaclforuser.model.AppUser;
+import com.android.mediaclforuser.model.Data;
+
+import java.io.File;
+import java.util.Date;
+
+import retrofit.http.Body;
 import retrofit.http.POST;
+import retrofit.http.Part;
 import retrofit.http.Query;
+import retrofit.mime.TypedFile;
 import rx.Observable;
 
 /**
  * Created by Administrator on 2015/11/20.
  */
 public interface GitHubService {
-
+    @POST("/SickNoWorry/userapi/sendCheckCode")
+    Observable<Data> getCode(@Query("phone")String phone);
+    @POST("/SickNoWorry/userapi/login")
+    Observable<Data<AppUser>> login(@Query("phone")String photo,@Query("check_code")String code);
+    @POST("/SickNoWorry/userapi/register")
+    Observable<Data<AppUser>> register(@Query("phone")String phone,@Query("user_name")String name,@Query("imageData")TypedFile file);
 }

@@ -6,7 +6,10 @@
     <color name="color_A2A2A2">#A2A2A2</color>
     <color name="color_F07F79">#F07F79</color>
     <color name="color_D4D4D4">#D4D4D4</color>
-
+    <color name="color_FAF9F7">#FAF9F7</color>
+    <color name="color_9CBA3F">#9CBA3F</color>
+    <color name="color_423930">#423930</color>
+    <color name="color_E8E1D9">#E8E1D9</color>
 
 
     <drawable name="color_A2A2A2">#A2A2A2</drawable>

@@ -2,6 +2,7 @@ package com.android.mediaclforuser.data;
 
 
 import retrofit.RestAdapter;
+import retrofit.mime.TypedFile;
 
 /**
  * Created by Administrator on 2015/11/30.
@@ -9,6 +10,7 @@ import retrofit.RestAdapter;
 public class RetroFitManager {
 
     private static RetroFitManager instance;
+    private String URL = "http://139.196.49.238/";
 
     public static RetroFitManager getInstance() {
         if (instance == null) {
@@ -24,7 +26,7 @@ public class RetroFitManager {
 
     private RestAdapter initRestAdapter() {
         return new RestAdapter.Builder()
-                .setEndpoint("http://tc.andone-media.com:8080/")
+                .setEndpoint(URL)
                 .build();
     }
 

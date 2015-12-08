@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_EEEEEE"
+    android:orientation="vertical">
+    <include layout="@layout/public_action_bar"/>
+
+    <com.android.mediaclforuser.view.CircleImageView
+        android:id="@+id/head_icon"
+        android:layout_width="@dimen/user_basic_information_head_icon_width"
+        android:layout_height="@dimen/user_basic_information_head_icon_width"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/touxiang"/>
+
+    <EditText
+        android:id="@+id/name_ed"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_activity_phone_height"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/login_activity_phone_margin_left"
+        android:layout_marginRight="@dimen/login_activity_phone_margin_left"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_edit_text_bg"
+        android:hint="输入姓名"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:singleLine="true"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/login_activity_phone_text_size" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_activity_phone_height"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/login_activity_phone_margin_left"
+        android:layout_marginRight="@dimen/login_activity_phone_margin_left"
+        android:layout_marginTop="30dp"
+        >
+        <EditText
+            android:id="@+id/phone_ed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_edit_text_bg"
+            android:hint="输入手机号"
+            android:inputType="number"
+            android:paddingLeft="20dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/login_activity_phone_text_size" />
+        <ImageView
+            android:id="@+id/is_phone_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/login_select_no"/>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -33,9 +33,6 @@ public class App extends Application {
         return RetroFitManager.getInstance().setBsaeUrl();
     }
 
-    public ACache initACache(){
-        return ACache.get(getApplicationContext());
-    }
 
     public  SharedPreferences provideSharedPreferences(Application app) {
         return app.getSharedPreferences("ele_bus", Context.MODE_PRIVATE);

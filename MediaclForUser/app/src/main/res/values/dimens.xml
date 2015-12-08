@@ -20,4 +20,7 @@
     <dimen name="login_activity_and_padding_left">8dp</dimen>
     <dimen name="login_activity_wei_bo_margin_left">40dp</dimen>
     <dimen name="login_activity_agree_iv_padding">10dp</dimen>
+
+    <!--activity_user_basic_information-->
+    <dimen name="user_basic_information_head_icon_width">100dp</dimen>
 </resources>
