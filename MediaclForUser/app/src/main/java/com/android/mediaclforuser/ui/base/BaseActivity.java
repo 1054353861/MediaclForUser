@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import com.android.mediaclforuser.utils.ACache;
 
 import butterknife.ButterKnife;
+import de.greenrobot.event.EventBus;
 
 /**
  * Created by Administrator on 2015/12/7.
@@ -13,6 +14,7 @@ import butterknife.ButterKnife;
 public abstract class BaseActivity extends FragmentActivity {
 
     protected ACache aCache;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

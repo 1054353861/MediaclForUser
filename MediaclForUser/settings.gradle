@@ -1,1 +1,2 @@
-include ':app'
+include ':app', ':slidingmenulib'
+project(':slidingmenulib').projectDir = new File('sliding_menu_lib')

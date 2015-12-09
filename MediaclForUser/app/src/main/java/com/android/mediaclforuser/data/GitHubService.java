@@ -8,6 +8,8 @@ import java.io.File;
 import java.util.Date;
 
 import retrofit.http.Body;
+import retrofit.http.Field;
+import retrofit.http.FormUrlEncoded;
 import retrofit.http.POST;
 import retrofit.http.Part;
 import retrofit.http.Query;
@@ -22,6 +24,7 @@ public interface GitHubService {
     Observable<Data> getCode(@Query("phone")String phone);
     @POST("/SickNoWorry/userapi/login")
     Observable<Data<AppUser>> login(@Query("phone")String photo,@Query("check_code")String code);
+    @FormUrlEncoded
     @POST("/SickNoWorry/userapi/register")
-    Observable<Data<AppUser>> register(@Query("phone")String phone,@Query("user_name")String name,@Query("imageData")TypedFile file);
+    Observable<Data<AppUser>> register(@Field("phone")String phone,@Field("user_name")String name,@Field("imageData")TypedFile file);
 }
