@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_303030"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sliding_menu_right_head_rel_margin_top"
+                android:background="@drawable/fragment_sliding_menu_right_text_bg"
+                android:paddingBottom="@dimen/sliding_menu_right_head_rel_padding_top"
+                android:paddingLeft="@dimen/sliding_menu_right_head_rel_padding_left"
+                android:paddingRight="@dimen/sliding_menu_right_head_rel_padding_left"
+                android:paddingTop="@dimen/sliding_menu_right_head_rel_padding_top">
+
+                <com.android.mediaclforuser.view.CircleImageView
+                    android:id="@+id/head_icon"
+                    android:layout_width="@dimen/sliding_menu_right_head_icon_width"
+                    android:layout_height="@dimen/sliding_menu_right_head_icon_width"
+                    android:src="@drawable/touxiang" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/head_icon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sliding_menu_right_name_text_size" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/color_ADADAD"
+                        android:textSize="@dimen/sliding_menu_right_phone_text_size" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="6dp"
+                    android:drawableRight="@drawable/next_white_alpha"
+                    android:textColor="@color/color_ADADAD"
+                    android:textSize="@dimen/sliding_menu_right_phone_text_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/family_info"
+                style="@style/fragment_sliding_menu_right_text_style"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/family"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/next_white_alpha"
+                android:text="家庭档案" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/sliding_menu_right_head_rel_padding_left"
+                android:background="@color/color_353535" />
+
+            <TextView
+                android:id="@+id/health"
+                style="@style/fragment_sliding_menu_right_text_style"
+                android:drawableLeft="@drawable/book"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/next_white_alpha"
+                android:text="健康自诊" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/sliding_menu_right_head_rel_padding_left"
+                android:background="@color/color_353535" />
+
+            <TextView
+                android:id="@+id/doctor"
+                style="@style/fragment_sliding_menu_right_text_style"
+                android:drawableLeft="@drawable/star"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/next_white_alpha"
+                android:text="关注医生" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/sliding_menu_right_head_rel_padding_left"
+                android:background="@color/color_353535" />
+
+            <TextView
+                android:id="@+id/health_class"
+                style="@style/fragment_sliding_menu_right_text_style"
+                android:drawableLeft="@drawable/lesson"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/next_white_alpha"
+                android:text="健康讲堂" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/sliding_menu_right_head_rel_padding_left"
+                android:background="@color/color_353535" />
+
+            <TextView
+                android:id="@+id/diagnose"
+                style="@style/fragment_sliding_menu_right_text_style"
+                android:drawableLeft="@drawable/box"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/next_white_alpha"
+                android:text="名义义诊" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/sliding_menu_right_head_rel_padding_left"
+                android:background="@color/color_353535" />
+
+            <TextView
+                android:id="@+id/integral_exchange"
+                style="@style/fragment_sliding_menu_right_text_style"
+                android:drawableLeft="@drawable/present"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/next_white_alpha"
+                android:text="积分兑礼" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/sliding_menu_right_head_rel_padding_left"
+                android:background="@color/color_353535" />
+
+            <TextView
+                android:id="@+id/setting"
+                style="@style/fragment_sliding_menu_right_text_style"
+                android:drawableLeft="@drawable/set"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/next_white_alpha"
+                android:text="设置" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -10,7 +10,8 @@ import retrofit.mime.TypedFile;
 public class RetroFitManager {
 
     private static RetroFitManager instance;
-    private String URL = "http://139.196.49.238/";
+    public static final String URL = "http://139.196.49.238/";
+    public static final String image = "http://139.196.49.238/res/";
 
     public static RetroFitManager getInstance() {
         if (instance == null) {

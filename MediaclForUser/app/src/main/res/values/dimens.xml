@@ -23,4 +23,13 @@
 
     <!--activity_user_basic_information-->
     <dimen name="user_basic_information_head_icon_width">100dp</dimen>
+
+    <!--fragment_sliding_menu_right-->
+    <dimen name="sliding_menu_right_head_rel_margin_top">50dp</dimen>
+    <dimen name="sliding_menu_right_head_rel_padding_left">20dp</dimen>
+    <dimen name="sliding_menu_right_text_padding">10dp</dimen>
+    <dimen name="sliding_menu_right_head_rel_padding_top">5dp</dimen>
+    <dimen name="sliding_menu_right_head_icon_width">60dp</dimen>
+    <dimen name="sliding_menu_right_name_text_size">18sp</dimen>
+    <dimen name="sliding_menu_right_phone_text_size">15sp</dimen>
 </resources>

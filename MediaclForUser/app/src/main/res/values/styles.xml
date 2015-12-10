@@ -34,4 +34,13 @@
         <attr name="tabTextAllCaps" format="boolean" />
     </declare-styleable>
 
+    <style name="fragment_sliding_menu_right_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/sliding_menu_right_head_rel_padding_left</item>
+        <item name="android:textSize">@dimen/sliding_menu_right_phone_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/fragment_sliding_menu_right_text_bg</item>
+    </style>
+
 </resources>

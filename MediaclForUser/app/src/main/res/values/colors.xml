@@ -12,7 +12,10 @@
     <color name="color_E8E1D9">#E8E1D9</color>
     <color name="color_303030">#303030</color>
     <color name="color_ffffff">#FFFFFF</color>
+    <color name="color_ADADAD">#ADADAD</color>
+    <color name="color_353535">#353535</color>
 
-
+    <drawable name="color_000000">#000000</drawable>
+    <drawable name="color_303030">#303030</drawable>
     <drawable name="color_A2A2A2">#A2A2A2</drawable>
 </resources>

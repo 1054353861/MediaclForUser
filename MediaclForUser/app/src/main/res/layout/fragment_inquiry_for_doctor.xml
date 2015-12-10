@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <TextView
+
+    <ViewStub
+        android:id="@+id/view_stub"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="问诊"/>
+        android:inflatedId="@+id/start_inquiry"
+        android:layout="@layout/activity_main_start_inquiry" />
 
-</LinearLayout>
+</RelativeLayout>

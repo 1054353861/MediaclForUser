@@ -46,4 +46,18 @@ public class Utils {
         return path;
     }
 
+    /**
+     * 转换手机号码  18888****1111
+     * 手机号显示前三位和后四位
+     * @param phone
+     * @return
+     */
+    public static String changePhone(String phone){
+        String number = null;
+        if (phone.length() > 0) {
+            number = phone.substring(0, 3) + "****" + phone.substring(phone.length() - 4, phone.length());
+        }
+        return number;
+    }
+
 }

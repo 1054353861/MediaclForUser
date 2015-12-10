@@ -89,6 +89,7 @@ public class CountDownAnimation {
         }
     }
 
+
     /**
      * Cancels the count down animation.
      */

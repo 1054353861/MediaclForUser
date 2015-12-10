@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.android.mediaclforuser.App;
 import com.android.mediaclforuser.R;
 import com.android.mediaclforuser.data.CacheManger;
+import com.android.mediaclforuser.data.RetroFitManager;
 import com.android.mediaclforuser.model.AppUser;
 import com.android.mediaclforuser.model.Data;
 import com.android.mediaclforuser.ui.base.BaseActivity;
@@ -211,7 +212,7 @@ public class UserBasicInformationActivity extends BaseActivity {
                     @Override
                     public Integer call(Data<AppUser> appUserData) {
                         if (appUserData.getAppuser() != null) {
-                            aCache.put(CacheManger.USER, appUserData.getAppuser());
+                            cache(appUserData.getAppuser());
                         }
                         ToastUtil.showToastShort(UserBasicInformationActivity.this, appUserData.getMessage());
                         return appUserData.getCode();
@@ -227,5 +228,15 @@ public class UserBasicInformationActivity extends BaseActivity {
             }
         });
     }
+
+    public void cache(AppUser user) {
+        CacheManger cacheManger = new CacheManger<String>();
+        cacheManger.save(aCache, CacheManger.ID, user.getId());
+        cacheManger.save(aCache, CacheManger.User_name, user.getUser_name());
+        cacheManger.save(aCache, CacheManger.INTEGRAL, String.valueOf(user.getIntegral()));
+        cacheManger.save(aCache, CacheManger.IMAGE_URL, RetroFitManager.image + user.getImageUrl());
+        cacheManger.save(aCache, CacheManger.PHONE, user.getPhone());
+    }
+
 
 }

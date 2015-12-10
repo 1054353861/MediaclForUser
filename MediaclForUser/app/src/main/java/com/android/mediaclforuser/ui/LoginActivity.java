@@ -12,9 +12,11 @@ import android.widget.TextView;
 import com.android.mediaclforuser.App;
 import com.android.mediaclforuser.R;
 import com.android.mediaclforuser.data.CacheManger;
+import com.android.mediaclforuser.data.RetroFitManager;
 import com.android.mediaclforuser.model.AppUser;
 import com.android.mediaclforuser.model.Data;
 import com.android.mediaclforuser.ui.base.BaseActivity;
+import com.android.mediaclforuser.utils.ACache;
 import com.android.mediaclforuser.utils.ToastUtil;
 import com.android.mediaclforuser.utils.Utils;
 import com.android.mediaclforuser.view.CountDownAnimation;
@@ -51,6 +53,7 @@ public class LoginActivity extends BaseActivity implements CountDownAnimation.Co
     private Boolean isClick = true;
     private CountDownAnimation countDownAnimation;
     private String phone, code;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +103,7 @@ public class LoginActivity extends BaseActivity implements CountDownAnimation.Co
             phone = mPhoneEd.getText().toString().trim();
             if (!Utils.isMobileNO(phone)) {
                 ToastUtil.showToastShort(LoginActivity.this, "请输入正确手机号！");
+                return;
             }
             getCodeData();
         }
@@ -164,9 +168,9 @@ public class LoginActivity extends BaseActivity implements CountDownAnimation.Co
                     @Override
                     public Integer call(Data<AppUser> appUserData) {
                         if (appUserData.getAppuser() != null) {
-                            aCache.put(CacheManger.USER, appUserData.getAppuser());
+                            cache(appUserData.getAppuser());
                         }
-                        ToastUtil.showToastShort(LoginActivity.this,appUserData.getMessage());
+                        ToastUtil.showToastShort(LoginActivity.this, appUserData.getMessage());
                         return appUserData.getCode();
                     }
                 }).subscribe(new Action1<Integer>() {
@@ -174,10 +178,21 @@ public class LoginActivity extends BaseActivity implements CountDownAnimation.Co
             public void call(Integer integer) {
                 if (integer == 0) {
                     finish();
-                } else if (integer!= 1) {
-                    startActivity(new Intent().setClass(LoginActivity.this,UserBasicInformationActivity.class));
+                } else if (integer != 1) {
+                    startActivity(new Intent().setClass(LoginActivity.this, UserBasicInformationActivity.class));
                 }
             }
         });
     }
+
+
+    public void cache(AppUser user){
+        CacheManger cacheManger = new CacheManger<String>();
+        cacheManger.save(aCache, CacheManger.ID, user.getId());
+        cacheManger.save(aCache,CacheManger.User_name,user.getUser_name());
+        cacheManger.save(aCache,CacheManger.INTEGRAL,String.valueOf(user.getIntegral()));
+        cacheManger.save(aCache,CacheManger.IMAGE_URL, RetroFitManager.image+user.getImageUrl());
+        cacheManger.save(aCache, CacheManger.PHONE, user.getPhone());
+    }
+
 }

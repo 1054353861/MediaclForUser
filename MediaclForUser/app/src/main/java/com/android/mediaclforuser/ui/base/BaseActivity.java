@@ -3,6 +3,8 @@ package com.android.mediaclforuser.ui.base;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import com.android.mediaclforuser.data.CacheManger;
+import com.android.mediaclforuser.model.AppUser;
 import com.android.mediaclforuser.utils.ACache;
 
 import butterknife.ButterKnife;

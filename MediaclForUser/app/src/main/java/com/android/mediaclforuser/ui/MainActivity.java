@@ -1,5 +1,6 @@
 package com.android.mediaclforuser.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
@@ -59,6 +60,7 @@ public class MainActivity extends BaseActivity {
     public void  getOnClick(View v){
         switch (v.getId()){
             case R.id.left_btn:
+                startActivity(new Intent().setClass(this,LoginActivity.class));
                 break;
             case R.id.right_btn:
                 menu.showSecondaryMenu();
