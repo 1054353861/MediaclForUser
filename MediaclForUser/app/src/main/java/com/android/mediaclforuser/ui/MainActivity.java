@@ -3,11 +3,14 @@ package com.android.mediaclforuser.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -38,6 +41,7 @@ public class MainActivity extends BaseActivity {
     private int mImage[] = {R.drawable.main_activity_inquiry_for_doc_icon, R.drawable.main_activity_inquiry_for_hos_icon};
     private String mText[] = {"问诊", "寻医"};
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,11 +60,11 @@ public class MainActivity extends BaseActivity {
         initRightMenu();
     }
 
-    @OnClick({R.id.left_btn,R.id.right_btn})
-    public void  getOnClick(View v){
-        switch (v.getId()){
+    @OnClick({R.id.left_btn, R.id.right_btn})
+    public void getOnClick(View v) {
+        switch (v.getId()) {
             case R.id.left_btn:
-                startActivity(new Intent().setClass(this,LoginActivity.class));
+                startActivity(new Intent().setClass(this, LoginActivity.class));
                 break;
             case R.id.right_btn:
                 menu.showSecondaryMenu();
@@ -107,7 +111,6 @@ public class MainActivity extends BaseActivity {
      * @param index
      * @return
      */
-
     private View getTabItemView(int index) {
         View view = LayoutInflater.from(this).inflate(R.layout.fragment_tab_content, null);
         ImageView mIcon = (ImageView) view.findViewById(R.id.icon);
@@ -116,7 +119,5 @@ public class MainActivity extends BaseActivity {
         mName.setText(mText[index]);
         return view;
     }
-
-
 
 }

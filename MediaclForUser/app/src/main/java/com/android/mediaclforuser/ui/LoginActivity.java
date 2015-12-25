@@ -195,4 +195,7 @@ public class LoginActivity extends BaseActivity implements CountDownAnimation.Co
         cacheManger.save(aCache, CacheManger.PHONE, user.getPhone());
     }
 
+
+
+
 }

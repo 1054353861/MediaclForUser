@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
 import com.android.mediaclforuser.data.CacheManger;
+import com.android.mediaclforuser.data.DiskLruCacheManager;
 import com.android.mediaclforuser.model.AppUser;
 import com.android.mediaclforuser.utils.ACache;
 
@@ -16,6 +17,7 @@ import de.greenrobot.event.EventBus;
 public abstract class BaseActivity extends FragmentActivity {
 
     protected ACache aCache;
+    protected DiskLruCacheManager cacheManager;
 
 
     @Override
@@ -25,6 +27,8 @@ public abstract class BaseActivity extends FragmentActivity {
         ButterKnife.bind(this);
         aCache = ACache.get(this);
     }
+
+
 
     protected abstract int provideContentViewId();
 

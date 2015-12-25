@@ -43,4 +43,6 @@
         <item name="android:background">@drawable/fragment_sliding_menu_right_text_bg</item>
     </style>
 
+
+
 </resources>

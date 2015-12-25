@@ -1,6 +1,7 @@
 package com.android.mediaclforuser.ui.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.android.mediaclforuser.R;
 import com.android.mediaclforuser.data.CacheManger;
+import com.android.mediaclforuser.ui.HealthClassActivity;
 import com.android.mediaclforuser.ui.base.BaseFragment;
 import com.android.mediaclforuser.utils.ToastUtil;
 import com.android.mediaclforuser.utils.Utils;
@@ -83,7 +85,7 @@ public class SlidMenuRightFragment extends BaseFragment {
                 ToastUtil.showToastShort(getActivity(), "用户信息");
                 break;
             case R.id.diagnose:
-                ToastUtil.showToastShort(getActivity(), "用户信息");
+               startActivity(new Intent().setClass(getActivity(), HealthClassActivity.class));
                 break;
             case R.id.integral_exchange:
                 ToastUtil.showToastShort(getActivity(), "用户信息");

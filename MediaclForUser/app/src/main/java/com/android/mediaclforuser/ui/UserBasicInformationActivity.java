@@ -105,7 +105,7 @@ public class UserBasicInformationActivity extends BaseActivity {
                 }
             }
         });
-    }
+}
 
     @OnClick({R.id.left_btn, R.id.right_btn, R.id.head_icon})
     public void onClick(View v) {

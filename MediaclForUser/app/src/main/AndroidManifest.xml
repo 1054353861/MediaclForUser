@@ -39,6 +39,11 @@
             android:name=".ui.UserBasicInformationActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"></activity>
+        <!--注册，完善用户基本信息-->
+        <activity
+            android:name=".ui.HealthClassActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
